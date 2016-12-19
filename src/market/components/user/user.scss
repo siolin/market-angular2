@@ -1,0 +1,24 @@
+/* Variables */
+
+$user-btn-font-size: inherit;
+$user-btn-line-height: 1.3rem;
+$user-btn-font-color: #444;
+$user-btn-bg: transparent;
+
+/* Styles */
+
+.user-btn {
+  padding: 0 .5rem;
+
+  text-decoration: none;
+
+  color: $user-btn-font-color;
+  background-color: $user-btn-bg;
+
+  font-size: $user-btn-font-size;
+  line-height: $user-btn-line-height;
+
+  &:hover {
+    color: green;
+  }
+}

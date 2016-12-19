@@ -1,3 +1,28 @@
+@import '../node_modules/normalize.css/normalize.css';
+
+/* Variables */
+
+$font-size: 16px;
+$line-heiht: 1.3rem;
+$bg: #fff;
+$font-family: 'PT Sans', Arial, sans-serif;
+
 body {
-  background-color: lightgrey;
+  margin: 0;
+  padding: 0;
+
+  background-color: $bg;
+
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: normal;
+  line-height: $line-heiht;
 }
+
+.content {
+  margin-top: 4rem;
+}
+
+/* Import components */
+@import 'market/components/header/header';
+@import 'market/components/user/user';

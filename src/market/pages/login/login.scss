@@ -1,0 +1,84 @@
+/* Variables */
+
+$login-bg: #fff;
+$login-font-color: #444;
+$login-font-size: inherit;
+$login-line-height: 1.3rem;
+
+/* Styles */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  label {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .label-title {
+    display: none;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+
+    border: none;
+    border-bottom: 1px solid $login-font-color;
+    outline: none;
+
+    font-size: inherit;
+    line-height: inherit;
+
+    &:focus + svg path{
+      fill: DeepSkyBlue;
+    }
+  }
+
+  input[type="submit"] {
+    padding: .5rem;
+
+    cursor: pointer;
+
+    color: $login-font-color;
+    border: none;
+    outline: none;
+    background: $login-bg;
+
+    font-size: inherit;
+    line-height: inherit;
+
+    &:hover {
+      color: $login-bg;
+      border-radius: 5px;
+      background-color: $login-font-color;
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 0px;
+    bottom: 0.5rem;
+
+    width: 1.5rem;
+
+    path {
+      transition: .5s fill;
+
+      fill: $login-font-color;
+    }
+  }
+
+  .modal-wrapper-error-message {
+    color: LightCoral;
+  }
+}
