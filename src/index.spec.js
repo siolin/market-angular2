@@ -12,7 +12,7 @@ require('zone.js/dist/sync-test');
 require('zone.js/dist/jasmine-patch');
 require('zone.js/dist/async-test');
 require('zone.js/dist/fake-async-test');
-const context = require.context('./app', true, /\.(js|ts|tsx)$/);
+const context = require.context('./market', true, /\.(js|ts|tsx)$/);
 context.keys().forEach(context);
 const testing = require('@angular/core/testing');
 const testingBrowser = require('@angular/platform-browser-dynamic/testing');
