@@ -1,15 +1,13 @@
-
-
 /* Variables */
 
-$login-bg: #fff;
-$login-font-color: #444;
-$login-font-size: inherit;
-$login-line-height: 1.3rem;
+$registrate-bg: #fff;
+$registrate-font-color: #444;
+$registrate-font-size: inherit;
+$registrate-line-height: 1.3rem;
 
 /* Styles */
 
-.login-wrapper {
+.registrate-wrapper {
   position: absolute;
   z-index: 2;
   top: 20%;
@@ -19,36 +17,36 @@ $login-line-height: 1.3rem;
   box-sizing: border-box;
   padding: 1rem;
 
-  color: $login-font-color;
-  background-color: $login-bg;
-  box-shadow: 0 0 0 1px $login-font-color, 0 0 6px 0 $login-font-color;
+  color: $registrate-font-color;
+  background-color: $registrate-bg;
+  box-shadow: 0 0 0 1px $registrate-font-color, 0 0 6px 0 $registrate-font-color;
 
   /* Small devices (tablets, 768px and up) */
   @media (min-width: 786px) {
-      top: 20%;
-      left: 30%;
+    top: 20%;
+    left: 30%;
 
-      width: 40%;
+    width: 40%;
   }
 
   /* Medium devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-      top: 20%;
-      left: 35%;
+    top: 20%;
+    left: 35%;
 
-      width: 30%;
+    width: 30%;
   }
 
   /* Large devices (large desktops, 1200px and up) */
   @media (min-width: 1200px) {
-      top: 20%;
-      left: 40%;
+    top: 20%;
+    left: 40%;
 
-      width: 20%;
+    width: 20%;
   }
 }
 
-.login-form {
+.registrate-form {
   display: flex;
   flex-direction: column;
 
@@ -74,7 +72,7 @@ $login-line-height: 1.3rem;
     padding: 0.5rem 2rem 0.5rem 0.5rem;
 
     border: none;
-    border-bottom: 1px solid $login-font-color;
+    border-bottom: 1px solid $registrate-font-color;
     outline: none;
 
     font-size: inherit;
@@ -90,18 +88,18 @@ $login-line-height: 1.3rem;
 
     cursor: pointer;
 
-    color: $login-font-color;
+    color: $registrate-font-color;
     border: none;
     outline: none;
-    background: $login-bg;
+    background: $registrate-bg;
 
     font-size: inherit;
     line-height: inherit;
 
     &:hover {
-      color: $login-bg;
+      color: $registrate-bg;
       border-radius: 5px;
-      background-color: $login-font-color;
+      background-color: $registrate-font-color;
     }
   }
 
@@ -115,7 +113,7 @@ $login-line-height: 1.3rem;
     path {
       transition: .5s fill;
 
-      fill: $login-font-color;
+      fill: $registrate-font-color;
     }
   }
 

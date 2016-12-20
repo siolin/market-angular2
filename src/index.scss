@@ -10,6 +10,7 @@ $font-family: 'PT Sans', Arial, sans-serif;
 body {
   margin: 0;
   padding: 0;
+  padding-top: 4rem;
 
   background-color: $bg;
 
@@ -19,10 +20,10 @@ body {
   line-height: $line-heiht;
 }
 
-.content {
-  margin-top: 4rem;
-}
-
 /* Import components */
 @import 'market/components/header/header';
 @import 'market/components/user/user';
+
+/* Import pages */
+@import 'market/pages/login/login';
+@import 'market/pages/registrate/registrate';
