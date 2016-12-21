@@ -1,8 +1,9 @@
 <site-header></site-header>
 <div class="login-wrapper">
-  <form action="" name="loginFrom" class="login-form" novalidate>
-    <label for="login"><span class="label-title">Логин</span>
-      <input type="text" id="login" name="login" placeholder="Логин" autofocus="true">
+  <form class="login-form" #f="ngForm" (ngSubmit)="onSubmit(f, $event)">
+    <label>
+      <span class="label-title">Логин</span>
+      <input type="text" placeholder="Логин" required [(ngModel)]="username" name="username">
       <!-- SVG icon login -->
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
         <g>
@@ -13,11 +14,12 @@
         </g>
       </svg>
     </label>
-    <label for="password"><span class="label-title">Пароль</span>
-      <input type="password" id="password" name="login" placeholder="Пароль">
+    <label>
+      <span class="label-title">Пароль</span>
+      <input type="password" placeholder="Пароль" required [(ngModel)]="password" name="password">
       <!-- SVG icon key -->
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
         <g>
           <g>
             <path d="M334.974,0c-95.419,0-173.049,77.63-173.049,173.049c0,21.213,3.769,41.827,11.211,61.403L7.672,399.928
@@ -43,5 +45,6 @@
       </svg>
     </label>
     <input type="submit" value="Войти">
+    <div class="error-message" *ngIf="errorRegistrate.status">{{ errorRegistrate.message }}</div>
   </form>
 </div>

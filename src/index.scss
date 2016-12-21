@@ -3,7 +3,7 @@
 /* Variables */
 
 $font-size: 16px;
-$line-heiht: 1.3rem;
+$line-height: 1.3rem;
 $bg: #fff;
 $font-family: 'PT Sans', Arial, sans-serif;
 
@@ -17,7 +17,7 @@ body {
   font-family: $font-family;
   font-size: $font-size;
   font-weight: normal;
-  line-height: $line-heiht;
+  line-height: $line-height;
 }
 
 /* Import components */
@@ -27,3 +27,4 @@ body {
 /* Import pages */
 @import 'market/pages/login/login';
 @import 'market/pages/registrate/registrate';
+@import 'market/pages/list/list';

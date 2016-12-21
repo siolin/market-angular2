@@ -3,8 +3,8 @@
 import {Component} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {MainComponent} from './main';
-import {LoginComponent} from './pages/login/login';
-import {RegistrateComponent} from './pages/registrate/registrate';
+import {LoginComponent} from './pages/login/login.component';
+import {RegistrateComponent} from './pages/registrate/registrate.component';
 import {ProductComponent} from './pages/product/product';
 
 @Component({
@@ -27,7 +27,7 @@ export const routes: Routes = [
     component: RegistrateComponent
   },
   {
-    path: 'product',
+    path: 'product/:id',
     component: ProductComponent
   }
 ];

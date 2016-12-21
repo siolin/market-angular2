@@ -1,6 +1,6 @@
 /* Variables */
 
-$user-btn-font-size: inherit;
+$user-btn-font-size: 1rem;
 $user-btn-line-height: 1.3rem;
 $user-btn-font-color: #444;
 $user-btn-bg: transparent;
@@ -13,12 +13,11 @@ $user-btn-bg: transparent;
   text-decoration: none;
 
   color: $user-btn-font-color;
-  background-color: $user-btn-bg;
 
   font-size: $user-btn-font-size;
   line-height: $user-btn-line-height;
 
   &:hover {
-    color: green;
+    color: black;
   }
 }

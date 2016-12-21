@@ -1,8 +1,9 @@
 <site-header></site-header>
 <div class="registrate-wrapper">
-  <form name="registrateForm" class="registrate-form">
-    <label for="login"><span class="label-title">Логин</span>
-      <input type="text" id="login" name="login" placeholder="Логин" required="true" ng-model="$ctrl.username" autofocus="true">
+  <form action="" class="registrate-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label>
+      <span class="label-title">Логин</span>
+      <input type="text" placeholder="Логин" required [(ngModel)]="username" name="username">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
         <g>
           <g>
@@ -12,8 +13,9 @@
         </g>
       </svg>
     </label>
-    <label for="password"><span class="label-title">Пароль</span>
-      <input type="password" id="password" name="password" placeholder="Пароль" required="true" ng-model="$ctrl.password">
+    <label>
+      <span class="label-title">Пароль</span>
+      <input type="password" placeholder="Пароль" required [(ngModel)]="password" name="password">
       <!-- SVG icon key -->
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -41,8 +43,9 @@
         </g>
       </svg>
     </label>
-    <label for="confirmPassword"><span class="label-title">Подтвердите пароль</span>
-      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Подтвердите пароль" required="true" ng-model="$ctrl.confirmPassword">
+    <label>
+      <span class="label-title">Подтвердите пароль</span>
+      <input type="password" placeholder="Подтвердите пароль" required [(ngModel)]="cPassword" name="cPassword">
       <!-- SVG icon key -->
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -71,6 +74,6 @@
       </svg>
     </label>
     <input type="submit" value="Зарегистрироваться">
-    <!-- <span class="modal-wrapper-error-message">{{$ctrl.errorMessage}}</span> -->
+    <div class="error-message" *ngIf="errorRegistrate.status">{{ errorRegistrate.message }}</div>
   </form>
 </div>

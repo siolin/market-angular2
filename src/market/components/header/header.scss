@@ -1,14 +1,9 @@
 /* Variables */
 
-$header-bg: #fff;
-$header-font-color: #444;
-$header-font-size: inherit;
-$header-line-height: 1.3rem;
-
-$header-logo-font-size: 1.8rem;
-$header-logo-line-height: 2.1rem;
-$header-logo-font-family: 'Aref Ruqaa', Arial, serif;
-$header-logo-font-color: inherit;
+$logo-font-color: #444;
+$logo-font-size: 1.8rem;
+$logo-line-height: 2.1rem;
+$logo-font-family: 'Aref Ruqaa', Arial, serif;
 
 /* Styles */
 
@@ -23,45 +18,22 @@ $header-logo-font-color: inherit;
   width: 100%;
   padding: 0 15px;
 
-  color: $header-font-color;
-  background-color: $header-bg;
-  box-shadow: 0 0 0 1px $header-font-color, 0 1px 2px 0 $header-font-color;
-
-  font-size: $header-font-size;
-  line-height: $header-line-height;
+  box-shadow: 0 0 0 1px #444, 0 1px 2px 0 #444;
 
   justify-content: space-between;
   align-items: center;
 
-  .header-logo {
+  .logo {
     padding: 3px 10px 10px;
 
+    color: $logo-font-color;
     text-decoration: none;
 
-    color: $header-logo-font-color;
-
-    font-family: $header-logo-font-family;
-    font-size: $header-logo-font-size;
-    line-height: $header-logo-line-height;
+    font-family: $logo-font-family;
+    font-size: $logo-font-size;
+    line-height: $logo-line-height;
 
     flex-grow: 1;
     flex-basis: 50%;
-
-    & a {
-      text-decoration: none;
-
-      color: $header-logo-font-color;
-    }
   }
-
-  // .auth-wrapper {
-  //   display: flex;
-
-  //   text-align: right;
-
-  //   flex-grow: 1;
-  //   flex-basis: 50%;
-  //   justify-content: flex-end;
-  //   align-items: center;
-  // }
 }

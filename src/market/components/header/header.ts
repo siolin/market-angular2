@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 })
 
 export class HeaderComponent {
-  public siteName: string;
+  siteName: string;
 
   constructor() {
     this.siteName = 'Market';

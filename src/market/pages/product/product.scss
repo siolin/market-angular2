@@ -1,0 +1,168 @@
+/* Variables */
+
+$product-bg: #fff;
+$product-font-color: #444;
+$product-font-size: inherit;
+$product-line-height: 1.3rem;
+
+/* Styles */
+
+.product {
+  display: flex;
+  flex-direction: column;
+
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  justify-content: center;
+
+  .preview {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 450px) {
+      flex-direction: row;
+    }
+  }
+
+  .preview-image {
+    text-align: center;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 1rem;
+
+    justify-content: flex-start;
+  }
+
+  h3 {
+    text-transform: uppercase;
+
+    color: black;
+  }
+
+  .comment-list {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    color: $product-font-color;
+
+    font-size: $product-font-size;
+    line-height: $product-line-height;
+
+  }
+
+  .comment-item {
+    padding: .5rem;
+
+    font-size: $product-font-size;
+    line-height: $product-line-height;
+  }
+
+  .comment-content {
+    text-indent: 1rem;
+  }
+
+  .comment-content-wrapper {
+    display: flex;
+
+    margin-top: .5rem;
+
+    border-bottom: 1px solid $product-font-color;
+
+    justify-content: space-between;
+  }
+
+  .comment-rate,
+  .comment-create {
+    color: lighten($product-font-color, 20%);
+
+    font-style: italic;
+
+    flex-grow: 1;
+  }
+
+  .comment-rate {
+    text-align: right;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    padding: 1rem;
+
+    align-items: center;
+
+    textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 1rem;
+
+      border: none;
+      border-radius: .5rem;
+      outline: none;
+      box-shadow: 0 0 0 1px $product-font-color, 0 0 6px 0 $product-font-color;
+    }
+
+    input[type="submit"] {
+      padding: .5rem;
+
+      cursor: pointer;
+
+      color: $product-font-color;
+      border: none;
+      outline: none;
+      background-color: $product-bg;
+
+      font-size: $product-font-size;
+      line-height: $product-line-height;
+
+      &:hover {
+        color: $product-bg;
+        border-radius: 5px;
+        background-color: $product-font-color;
+      }
+    }
+  }
+
+  .rate-list {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+
+    list-style: none;
+
+    justify-content: center;
+
+    .rate-item {
+      padding: .5rem;
+    }
+
+    label,
+    input[type="radio"] {
+      cursor: pointer;
+    }
+
+    input[type="radio"] {
+      outline: none;
+    }
+  }
+
+}

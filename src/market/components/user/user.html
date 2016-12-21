@@ -1,3 +1,17 @@
-<a class="user-btn" routerLink="/registrate">Регистрация</a>
-<a class="user-btn" routerLink="/login">Вход</a>
-<a class="user-btn" href="#">Выход</a>
+<a
+  class="user-btn"
+  routerLink="/registrate"
+  *ngIf="!token"
+  >Регистрация</a>
+<a
+  class="user-btn"
+  routerLink="/login"
+  *ngIf="!token"
+  >Вход</a>
+<a
+  class="user-btn"
+  href="#"
+  *ngIf="token"
+  logout
+  (click)="onClickLogout($event)"
+  >Выход</a>

@@ -1,10 +1,9 @@
-<h1>List component</h1>
 <ul class="products-list">
-  <!--<li class="products-item" ng-repeat="item in $ctrl.products">
+  <li class="products-item" *ngFor="let item of products">
     <img class="products-item-image" src="http://smktesting.herokuapp.com/static/{{item.img}}" alt="item.title">
     <div class="products-item-description">
-      <a ui-sref="product({ productId: item.id })" ui-sref-active="active">{{item.title}}</a>
+      <a href="#">{{item.title}}</a>
       <p class="products-item-description">{{item.text}}</p>
     </div>
-  </li>-->
+  </li>
 </ul>

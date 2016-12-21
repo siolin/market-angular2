@@ -1,6 +1,6 @@
 /* Variables */
 
-$registrate-bg: #fff;
+// $registrate-bg: #fff;
 $registrate-font-color: #444;
 $registrate-font-size: inherit;
 $registrate-line-height: 1.3rem;
@@ -18,7 +18,6 @@ $registrate-line-height: 1.3rem;
   padding: 1rem;
 
   color: $registrate-font-color;
-  background-color: $registrate-bg;
   box-shadow: 0 0 0 1px $registrate-font-color, 0 0 6px 0 $registrate-font-color;
 
   /* Small devices (tablets, 768px and up) */
@@ -81,6 +80,9 @@ $registrate-line-height: 1.3rem;
     &:focus + svg path{
       fill: DeepSkyBlue;
     }
+    &.ng-valid + svg path {
+      fill: green;
+    }
   }
 
   input[type="submit"] {
@@ -91,13 +93,13 @@ $registrate-line-height: 1.3rem;
     color: $registrate-font-color;
     border: none;
     outline: none;
-    background: $registrate-bg;
+    background: transparent;
 
     font-size: inherit;
     line-height: inherit;
 
     &:hover {
-      color: $registrate-bg;
+      color: white;
       border-radius: 5px;
       background-color: $registrate-font-color;
     }
@@ -117,7 +119,7 @@ $registrate-line-height: 1.3rem;
     }
   }
 
-  .modal-wrapper-error-message {
+  .error-message {
     color: LightCoral;
   }
 }

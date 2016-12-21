@@ -1,5 +1,3 @@
-
-
 /* Variables */
 
 $login-bg: #fff;
@@ -83,6 +81,9 @@ $login-line-height: 1.3rem;
     &:focus + svg path{
       fill: DeepSkyBlue;
     }
+    &.ng-valid + svg path {
+      fill: green;
+    }
   }
 
   input[type="submit"] {
@@ -119,7 +120,7 @@ $login-line-height: 1.3rem;
     }
   }
 
-  .modal-wrapper-error-message {
+  .error-message {
     color: LightCoral;
   }
 }
