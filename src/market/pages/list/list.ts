@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+
 import {ProductService} from '../../services/product.service';
 
 // import './rxjs-operators';
@@ -12,8 +14,11 @@ import {ProductService} from '../../services/product.service';
 export class ListComponent {
   products: Object;
 
-  constructor(private productService: ProductService) {
-
+  constructor(
+    private productService: ProductService,
+    private router: Router
+  ) {
+    this.getProducts();
   }
 
   getProducts() {
@@ -23,7 +28,7 @@ export class ListComponent {
     });
   }
 
-  ngOnInit(): void{
-    this.getProducts();
+  onClickElement(id) {
+    this.router.navigate(['/product', id]);
   }
 }

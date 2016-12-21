@@ -1,53 +1,55 @@
-<!--<section class="product">
+<site-header></site-header>
+
+<section class="product">
 
   <div class="preview">
     <div class="preview-image">
-      <img src="http://smktesting.herokuapp.com/static/{{$ctrl.product.img}}" alt="{{$ctrl.product.title}}">
+      <img src="{{product?.imageUrl}}" alt="{{product?.title}}">
     </div>
     <div class="description">
-      <h3 class="description-title">{{$ctrl.product.title}}</h3>
-      <p class="description-content">{{$ctrl.product.text}}</p>
-      <add-cart-button product="$ctrl.product.id" image="$ctrl.product.img" ptitle="$ctrl.product.title"></add-cart-button>
+      <h3 class="description-title">{{product?.title}}</h3>
+      <p class="description-content">{{product?.text}}</p>
+      <!--<add-cart-button product="product.id" image="product.img" ptitle="product.title"></add-cart-button>-->
     </div>
   </div>
 
   <h3>Comments</h3>
 
   <ul class="comment-list">
-    <li class="comment-item" ng-repeat="comment in $ctrl.comments">
+    <li class="comment-item" *ngFor="let comment of comments">
       <div class="comment-content">{{comment.text}}</div>
       <div class="comment-content-wrapper">
-        <div class="comment-create">{{comment.created_at | date : medium}}</div>
+        <div class="comment-create">{{comment.created_at}}</div>
         <div class="comment-rate">Rate: {{comment.rate}}</div>
       </div>
     </li>
   </ul>
 
-  <form action="" class="comment-form" ng-submit="$ctrl.addComment($event)" ng-if="$ctrl.auth">
-    <textarea name="name" rows="8" cols="80" placeholder="Комментарий" ng-model="$ctrl.comment" required="true"></textarea>
+  <form class="comment-form" #f="ngForm" (ngSubmit)="onSubmitComment(f, $event)">
+    <textarea name="name" rows="8" cols="80" placeholder="Комментарий" [(ngModel)]="text" name="text"></textarea>
     <ul class="rate-list">
       <li class="rate-item">
         <label for="rate_1">1</label>
-        <input type="radio" name="rate" id="rate_1" ng-model="$ctrl.rate" value="1">
+        <input type="radio" name="rate" id="rate_1" [(ngModel)]="rate" name="rate" value="1">
       </li>
       <li class="rate-item">
         <label for="rate_2">2</label>
-        <input type="radio" name="rate" id="rate_2" ng-model="$ctrl.rate" value="2">
+        <input type="radio" name="rate" id="rate_2" [(ngModel)]="rate" name="rate" value="2">
       </li>
       <li class="rate-item">
         <label for="rate_3">3</label>
-        <input type="radio" name="rate" id="rate_3" ng-model="$ctrl.rate" value="3">
+        <input type="radio" name="rate" id="rate_3" [(ngModel)]="rate" name="rate" value="3">
       </li>
       <li class="rate-item">
         <label for="rate_4">4</label>
-        <input type="radio" name="rate" id="rate_4" ng-model="$ctrl.rate" value="4">
+        <input type="radio" name="rate" id="rate_4" [(ngModel)]="rate" name="rate" value="4">
       </li>
       <li class="rate-item">
         <label for="rate_5">5</label>
-        <input type="radio" name="rate" id="rate_5" ng-model="$ctrl.rate" value="5" checked="true">
+        <input type="radio" name="rate" id="rate_5" [(ngModel)]="rate" name="rate" value="5" checked="true">
       </li>
     </ul>
     <input type="submit" value="Комментировать">
   </form>
 
-</section>-->
+</section>

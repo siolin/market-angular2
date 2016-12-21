@@ -12,7 +12,7 @@ import {AuthService} from '../../services/auth.service';
 })
 
 export class LoginComponent {
-    errorRegistrate: any = {
+  errorRegistrate: any = {
     status: false,
     message: ''
   }

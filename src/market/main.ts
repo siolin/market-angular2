@@ -1,14 +1,10 @@
 import {Component} from '@angular/core';
-import {ProductService} from './services/product.service';
 
 @Component({
   selector: 'fountain-app',
-  template: require('./main.html'),
-  providers: [ProductService]
+  template: require('./main.html')
 })
 export class MainComponent {
 
-  constructor() {
-    // this.authService.getProducts();
-  }
+  constructor() {}
 }

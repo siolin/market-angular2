@@ -12,6 +12,7 @@ import {RegistrateComponent} from './pages/registrate/registrate.component';
 import {ListComponent} from './pages/list/list';
 import {ProductComponent} from './pages/product/product';
 import {LogoutDirective} from './directives/logout';
+import {requestOptionsProvider} from './services/default-request-options.service';
 
 import {MainComponent} from './main';
 
@@ -34,6 +35,7 @@ import {MainComponent} from './main';
     MainComponent,
     LogoutDirective
   ],
+  providers: [ requestOptionsProvider ],
   bootstrap: [RootComponent]
 })
 export class MarketModule {}

@@ -8,7 +8,9 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ProductService {
 
-  constructor(private http: Http) { }
+  constructor(
+    private http: Http,
+  ) { }
 
   getProducts(): Observable<any> {
     return this.http.get('http://smktesting.herokuapp.com/api/products/')
