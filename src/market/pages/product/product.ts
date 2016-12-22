@@ -13,7 +13,7 @@ import { ProductService } from '../../services/product.service';
 
 export class ProductComponent {
   id: number;
-  comments: Object<any>;
+  comments: any;
   product: Object;
   newComment: Object;
   imageUrl: string = 'http://smktesting.herokuapp.com/static/';

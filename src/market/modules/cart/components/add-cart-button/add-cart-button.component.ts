@@ -24,7 +24,7 @@ export class AddCartButtonComponent {
 
   ngOnChanges() {
     if (this.product) {
-      this.buttonDisable =  this.cartService.checkProduct(this.product);
+      this.buttonDisable =  this.cartService.checkProduct(+this.product);
     }
   }
 }
