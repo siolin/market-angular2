@@ -1,27 +1,27 @@
-import {Component} from '@angular/core';
-import {NgForm} from '@angular/forms';
-import {Router} from '@angular/router';
-import {LocalStorageService} from 'ng2-webstorage/';
+import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LocalStorageService } from 'ng2-webstorage/';
 
-import {AuthService} from '../../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'login',
+  selector: 'login-page',
   template: require('./login.html'),
-  providers: [AuthService]
+  providers: [ AuthService ]
 })
 
 export class LoginComponent {
   errorRegistrate: any = {
     status: false,
     message: ''
-  }
+  };
 
   constructor(
     private authService: AuthService,
     private router: Router,
     private storage: LocalStorageService
-  ) {}
+  ) { }
 
   onSubmit(f: NgForm, e: any) {
     this.authService.login(f.value)

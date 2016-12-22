@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 import { CartService } from '../../services/cart.service';
 
@@ -11,7 +11,7 @@ export class CartButtonComponent {
 
   constructor(
     private cartService: CartService
-  ) {}
+  ) { }
 
   getCount() {
     return this.cartService.countPoducts();

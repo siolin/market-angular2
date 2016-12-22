@@ -1,14 +1,14 @@
-import {Component} from '@angular/core';
-import {NgForm} from '@angular/forms';
-import {Router} from '@angular/router';
-import {LocalStorageService} from 'ng2-webstorage';
+import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LocalStorageService } from 'ng2-webstorage';
 
-import {AuthService} from '../../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'registrate',
+  selector: 'registr-page',
   template: require('./registrate.html'),
-  providers: [AuthService]
+  providers: [ AuthService ]
 })
 
 export class RegistrateComponent {
@@ -21,7 +21,7 @@ export class RegistrateComponent {
     private authService: AuthService,
     private router: Router,
     private storage: LocalStorageService
-  ) {}
+  ) { }
 
   onSubmit(f: NgForm) {
     if (f.value.password === f.value.cPassword) {

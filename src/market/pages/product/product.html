@@ -2,11 +2,11 @@
 
   <div class="preview">
     <div class="preview-image">
-      <img src="{{product?.imageUrl}}" alt="{{product?.title}}">
+      <img src="{{ product?.imageUrl }}" alt="{{ product?.title }}">
     </div>
     <div class="description">
-      <h3 class="description-title">{{product?.title}}</h3>
-      <p class="description-content">{{product?.text}}</p>
+      <h3 class="description-title">{{ product?.title }}</h3>
+      <p class="description-content">{{ product?.text }}</p>
       <add-cart-button [product]="product?.id" [image]="product?.imageUrl" [ptitle]="product?.title"></add-cart-button>
     </div>
   </div>

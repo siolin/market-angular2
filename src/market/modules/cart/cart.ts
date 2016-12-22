@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import { CartService } from './services/cart.service';
 
 @Component({
-  selector: 'cart',
+  selector: 'cart-page',
   template: require('./cart.html')
 })
 export class CartComponent {

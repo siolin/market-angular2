@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { LocalStorageService } from 'ng2-webstorage';
 
 @Injectable()
@@ -18,23 +17,21 @@ export class CartService {
       title,
       img
     };
-    const totalPrice = data.price * data.count;
-    data.totalPrice = totalPrice;
+    data.totalPrice = data.price * data.count;
     const cart = this.storage.retrieve('cart') || [];
     cart.push(data);
     this.storage.store('cart', cart);
-    // this.$rootScope.$broadcast('cartUpdate');
   }
 
   getProducts() {
     return this.storage.retrieve('cart');
   }
 
-  checkProduct(product) {
+  checkProduct(id: number) {
     const cart = this.storage.retrieve('cart');
     if (cart) {
       const result = cart.find(el => {
-        if (el.id === product) {
+        if (el.id === id) {
           return true;
         }
       });
@@ -51,7 +48,6 @@ export class CartService {
   }
 
   updateProduct(id: number, count: number) {
-    console.log(id);
     const data = this.storage.retrieve('cart');
     const obj = data.map(el => {
       if (el.id === id) {
@@ -72,8 +68,6 @@ export class CartService {
       return true;
     });
     this.storage.store('cart', obj);
-    // this.$rootScope.$broadcast('cartUpdate');
     return true;
   }
-
 }

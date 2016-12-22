@@ -1,12 +1,9 @@
-/// <reference path="../../typings/index.d.ts"/>
-
-import {Component} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-// import {MainComponent} from './main';
+import { Component } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './pages/list/list';
-import {LoginComponent} from './pages/login/login.component';
-import {RegistrateComponent} from './pages/registrate/registrate.component';
-import {ProductComponent} from './pages/product/product';
+import { LoginComponent } from './pages/login/login.component';
+import { RegistrateComponent } from './pages/registrate/registrate.component';
+import { ProductComponent } from './pages/product/product';
 import { CanActivateTeam } from './services/can-activate.service';
 
 @Component({

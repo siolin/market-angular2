@@ -1,13 +1,15 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
-import {routing} from './routes';
-import {Ng2Webstorage} from 'ng2-webstorage';
+/* Angular components */
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { routing } from './routes';
+import { Ng2Webstorage } from 'ng2-webstorage';
 
+/* Custom components */
 import { AuthService } from '../../services/auth.service';
 import { CanActivateTeam, Permissions, UserToken } from '../../services/can-activate.service';
 
-import {CartComponent} from './cart';
+import { CartComponent } from './cart';
 
 @NgModule({
   imports: [
@@ -20,6 +22,6 @@ import {CartComponent} from './cart';
     CartComponent
   ],
   providers: [ AuthService, CanActivateTeam, Permissions, UserToken ],
-  bootstrap: [CartComponent]
+  bootstrap: [ CartComponent ]
 })
 export class CartModule {}

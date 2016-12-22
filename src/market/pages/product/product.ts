@@ -1,19 +1,19 @@
-import {Component} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {NgForm} from '@angular/forms';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
-import {CommentService} from '../../services/comment.service';
-import {ProductService} from '../../services/product.service';
+import { CommentService } from '../../services/comment.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'product-detail',
   template: require('./product.html'),
-  providers: [CommentService, ProductService]
+  providers: [ CommentService, ProductService ]
 })
 
 export class ProductComponent {
   id: number;
-  comments: Array<any>;
+  comments: Object<any>;
   product: Object;
   newComment: Object;
   imageUrl: string = 'http://smktesting.herokuapp.com/static/';
@@ -22,9 +22,9 @@ export class ProductComponent {
     private router: ActivatedRoute,
     private commentService: CommentService,
     private productService: ProductService
-  ) {}
+  ) { }
 
-  addComment(id, data) {
+  addComment(id: number, data: Object) {
     this.commentService.addComment(id, data)
       .subscribe((data: any) => {
         if (data.success) {
@@ -53,7 +53,7 @@ export class ProductComponent {
           if (product.id === this.id) {
             return true;
           }
-        })
+        });
         product[0].imageUrl = this.imageUrl + product[0].img;
         this.product = product[0];
     });

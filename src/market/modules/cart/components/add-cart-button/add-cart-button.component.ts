@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 import { CartService } from '../../services/cart.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class AddCartButtonComponent {
 
   constructor(
     private cartService: CartService
-  ) {}
+  ) { }
 
   addProduct() {
     this.cartService.addProduct(this.product, this.ptitle, this.image);

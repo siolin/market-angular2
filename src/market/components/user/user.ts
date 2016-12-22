@@ -1,11 +1,11 @@
-import {Component} from '@angular/core';
-import {AuthService} from '../../services/auth.service';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'user-block',
-  template: require('./user.html'),
-  providers: [AuthService]
+  template: require('./user.html')
 })
 
 export class UserComponent {
@@ -15,7 +15,7 @@ export class UserComponent {
   constructor(
     private authService: AuthService,
     private router: Router
-  ) {}
+  ) { }
 
   checkAuth() {
     return this.authService.getToken();

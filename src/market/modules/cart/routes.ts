@@ -1,5 +1,6 @@
-import {RouterModule, Routes} from '@angular/router';
-import {CartComponent} from './cart';
+import { RouterModule, Routes } from '@angular/router';
+
+import { CartComponent } from './cart';
 import { CanActivateTeam } from '../../services/can-activate.service';
 
 export const routes: Routes = [

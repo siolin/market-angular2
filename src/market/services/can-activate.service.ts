@@ -6,9 +6,10 @@ import { AuthService } from './auth.service';
 @Injectable()
 export class UserToken {
   token: string;
+
   constructor(
     private authService: AuthService
-  ) {}
+  ) { }
 
   getToken() {
     return this.authService.getToken();

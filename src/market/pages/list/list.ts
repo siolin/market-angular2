@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
-import {Router} from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
-import {ProductService} from '../../services/product.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
-  selector: 'list',
+  selector: 'list-product',
   template: require('./list.html'),
-  providers: [ProductService]
+  providers: [ ProductService ]
 })
 
 export class ListComponent {
@@ -26,7 +26,7 @@ export class ListComponent {
     });
   }
 
-  onClickElement(id) {
+  onClickElement(id: number) {
     this.router.navigate(['/product', id]);
   }
 }

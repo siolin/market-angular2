@@ -1,5 +1,5 @@
-import {Directive, HostListener} from '@angular/core';
-import {LocalStorageService} from 'ng2-webstorage';
+import { Directive, HostListener } from '@angular/core';
+import { LocalStorageService } from 'ng2-webstorage';
 
 @Directive({
   selector: '[logout]'
@@ -7,10 +7,11 @@ import {LocalStorageService} from 'ng2-webstorage';
 
 export class LogoutDirective {
 
-  constructor(private storage: LocalStorageService) {}
+  constructor(
+    private storage: LocalStorageService
+  ) { }
 
   @HostListener('click') logout() {
     this.storage.clear('token');
   }
-
 }
