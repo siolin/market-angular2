@@ -2,7 +2,7 @@
   <li class="products-item" *ngFor="let item of products" (click)="onClickElement(item.id)">
     <img class="products-item-image" src="http://smktesting.herokuapp.com/static/{{item.img}}" alt="item.title">
     <div class="products-item-description">
-      <a href="#">{{item.title}}</a>
+      <h3 class="products-item-title">{{item.title}}</h3>
       <p class="products-item-description">{{item.text}}</p>
     </div>
   </li>

@@ -4,12 +4,11 @@ import {NgForm} from '@angular/forms';
 
 import {CommentService} from '../../services/comment.service';
 import {ProductService} from '../../services/product.service';
-import {requestOptionsProvider} from '../../services/default-request-options.service';
 
 @Component({
-  selector: 'product',
+  selector: 'product-detail',
   template: require('./product.html'),
-  providers: [CommentService, ProductService, requestOptionsProvider]
+  providers: [CommentService, ProductService]
 })
 
 export class ProductComponent {
@@ -28,17 +27,18 @@ export class ProductComponent {
   addComment(id, data) {
     this.commentService.addComment(id, data)
       .subscribe((data: any) => {
-        console.log(data);
+        if (data.success) {
+          this.commentService.getComments(this.id)
+            .subscribe((data: any) => {
+              this.comments = data;
+          });
+        }
     });
   }
 
-  onSubmitComment(f: NgForm, e: any) {
-    // e.preventDefault();
-    // console.log(f.value);
-    this.newComment = f.value;
-    if (this.addComment(this.id, this.newComment)) {
-      console.log('Comment was add');
-    }
+  onSubmitComment(f: NgForm, e: Event) {
+    e.preventDefault();
+    this.addComment(this.id, f.value);
   }
 
   ngOnInit() {
@@ -57,7 +57,5 @@ export class ProductComponent {
         product[0].imageUrl = this.imageUrl + product[0].img;
         this.product = product[0];
     });
-}
-
-
+  }
 }

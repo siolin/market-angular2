@@ -5,15 +5,15 @@ import {HttpModule} from '@angular/http';
 import {routing, RootComponent} from './routes';
 import {Ng2Webstorage} from 'ng2-webstorage';
 
-import {HeaderComponent} from './components/header/header';
-import {UserComponent} from './components/user/user';
-import {LoginComponent} from './pages/login/login.component';
-import {RegistrateComponent} from './pages/registrate/registrate.component';
-import {ListComponent} from './pages/list/list';
-import {ProductComponent} from './pages/product/product';
-import {LogoutDirective} from './directives/logout';
-import { AuthService } from './services/auth.service';
-import { CanActivateTeam, Permissions, UserToken } from './services/can-activate.service';
+// import {HeaderComponent} from './components/header/header';
+// import {UserComponent} from './components/user/user';
+// import {LoginComponent} from './pages/login/login.component';
+// import {RegistrateComponent} from './pages/registrate/registrate.component';
+// import {ListComponent} from './pages/list/list';
+// import {ProductComponent} from './pages/product/product';
+// import {LogoutDirective} from './directives/logout';
+// import { AuthService } from './services/auth.service';
+// import { CanActivateTeam, Permissions, UserToken } from './services/can-activate.service';
 
 import {MainComponent} from './main';
 

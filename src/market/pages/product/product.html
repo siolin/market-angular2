@@ -25,7 +25,7 @@
     </li>
   </ul>
 
-  <form class="comment-form" #f="ngForm" (ngSubmit)="onSubmitComment(f, $event)">
+  <form class="comment-form" #f="ngForm" (ngSubmit)="onSubmitComment(f, $event); f.reset()">
     <textarea name="name" rows="8" cols="80" placeholder="Комментарий" [(ngModel)]="text" name="text"></textarea>
     <ul class="rate-list">
       <li class="rate-item">
