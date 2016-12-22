@@ -1,33 +1,11 @@
-import {Component} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {MainComponent} from './main';
-import {LoginComponent} from './pages/login/login.component';
-import {RegistrateComponent} from './pages/registrate/registrate.component';
-import {ProductComponent} from './pages/product/product';
-import { CanActivateTeam } from './services/can-activate.service';
-
-@Component({
-  selector: 'fountain-root',
-  template: '<router-outlet></router-outlet>'
-})
-export class RootComponent {}
+import {CartComponent} from './cart';
+import { CanActivateTeam } from '../../services/can-activate.service';
 
 export const routes: Routes = [
   {
-    path: '',
-    component: MainComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'registrate',
-    component: RegistrateComponent
-  },
-  {
-    path: 'product/:id',
-    component: ProductComponent,
+    path: 'cart',
+    component: CartComponent,
     canActivate: [CanActivateTeam]
   }
 ];

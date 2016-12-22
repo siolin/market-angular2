@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 
+import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'site-header',
   template: require('./header.html')
@@ -8,7 +10,13 @@ import {Component} from '@angular/core';
 export class HeaderComponent {
   siteName: string;
 
-  constructor() {
+  constructor(
+    private authService: AuthService
+  ) {
     this.siteName = 'Market';
+  }
+
+  checkAuth() {
+    return this.authService.getToken();
   }
 }

@@ -1,0 +1,33 @@
+/* Variables */
+
+/* Styles */
+
+.cart-button {
+  position: relative;
+  text-decoration: none;
+  margin-right: 1rem;
+
+  svg {
+    width: 1.5rem;
+
+    cursor: pointer;
+  }
+
+  .count {
+    position: absolute;
+    // width: 1.5rem;
+    // height: 1.5rem;
+
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    padding: .1rem .4rem;
+    top: -.3rem;
+    right: -1rem;
+
+    border-radius: .5rem;
+    background: coral;
+  }
+}

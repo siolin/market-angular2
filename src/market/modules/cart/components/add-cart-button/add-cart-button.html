@@ -1,0 +1,4 @@
+<div class="add-cart-button" *ngIf="product != undefined">
+  <button type="button" name="button" class="button" (click)="addProduct()" *ngIf="!buttonDisable">Купить</button>
+  <a routerLink="/cart" *ngIf="buttonDisable">Перейти в корзину</a>
+</div>

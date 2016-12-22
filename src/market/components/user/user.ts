@@ -15,8 +15,10 @@ export class UserComponent {
   constructor(
     private authService: AuthService,
     private router: Router
-  ) {
-    this.token = this.authService.getToken();
+  ) {}
+
+  checkAuth() {
+    return this.authService.getToken();
   }
 
   onClickLogout(e: Event) {

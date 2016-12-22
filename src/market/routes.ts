@@ -2,7 +2,8 @@
 
 import {Component} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {MainComponent} from './main';
+// import {MainComponent} from './main';
+import { ListComponent } from './pages/list/list';
 import {LoginComponent} from './pages/login/login.component';
 import {RegistrateComponent} from './pages/registrate/registrate.component';
 import {ProductComponent} from './pages/product/product';
@@ -10,14 +11,17 @@ import { CanActivateTeam } from './services/can-activate.service';
 
 @Component({
   selector: 'fountain-root',
-  template: '<router-outlet></router-outlet>'
+  template: `
+    <site-header></site-header>
+    <router-outlet></router-outlet>
+  `
 })
 export class RootComponent {}
 
 export const routes: Routes = [
   {
     path: '',
-    component: MainComponent
+    component: ListComponent
   },
   {
     path: 'login',

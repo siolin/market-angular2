@@ -15,7 +15,10 @@ import {LogoutDirective} from './directives/logout';
 import { AuthService } from './services/auth.service';
 import { CanActivateTeam, Permissions, UserToken } from './services/can-activate.service';
 
-import {MainComponent} from './main';
+import { CartModule } from './modules/cart';
+import { AddCartButtonComponent } from './modules/cart/components/add-cart-button/add-cart-button.component';
+import { CartButtonComponent } from './modules/cart/components/cart-button/cart-button.component';
+import { CartService } from './modules/cart/services/cart.service';
 
 @NgModule({
   imports: [
@@ -23,7 +26,8 @@ import {MainComponent} from './main';
     routing,
     FormsModule,
     HttpModule,
-    Ng2Webstorage
+    Ng2Webstorage,
+    CartModule
   ],
   declarations: [
     RootComponent,
@@ -33,10 +37,11 @@ import {MainComponent} from './main';
     RegistrateComponent,
     ListComponent,
     ProductComponent,
-    MainComponent,
-    LogoutDirective
+    LogoutDirective,
+    AddCartButtonComponent,
+    CartButtonComponent
   ],
-  providers: [ AuthService, CanActivateTeam, Permissions, UserToken ],
+  providers: [ AuthService, CartService, CanActivateTeam, Permissions, UserToken ],
   bootstrap: [RootComponent]
 })
 export class MarketModule {}

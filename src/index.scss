@@ -29,3 +29,6 @@ body {
 @import 'market/pages/registrate/registrate';
 @import 'market/pages/list/list';
 @import 'market/pages/product/product';
+
+/* Import modules */
+@import 'market/modules/cart/index.scss'

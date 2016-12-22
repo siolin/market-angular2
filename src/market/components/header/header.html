@@ -1,4 +1,7 @@
 <header class="header">
   <a class="logo" routerLink="">Market</a>
-  <user-block></user-block>
+  <div>
+    <cart-button *ngIf="checkAuth()"></cart-button>
+    <user-block></user-block>
+  </div>
 </header>
