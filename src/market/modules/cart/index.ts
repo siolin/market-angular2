@@ -9,6 +9,9 @@ import { Ng2Webstorage } from 'ng2-webstorage';
 import { AuthService } from '../../services/auth.service';
 import { CanActivateTeam, Permissions, UserToken } from '../../services/can-activate.service';
 
+/* Castom directives */
+// import { PopUpCartDirective } from './directives/pop-up-cart.directive';
+
 import { CartComponent } from './cart';
 
 @NgModule({

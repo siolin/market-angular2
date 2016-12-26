@@ -8,6 +8,8 @@ import { HttpModule } from '@angular/http';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
 /* Custom components */
+import { ToasterModule } from 'angular2-toaster';
+
 import { routing, RootComponent } from './routes';
 
 import { HeaderComponent } from './components/header/header';
@@ -25,6 +27,7 @@ import { CartModule } from './modules/cart';
 import { AddCartButtonComponent } from './modules/cart/components/add-cart-button/add-cart-button.component';
 import { CartButtonComponent } from './modules/cart/components/cart-button/cart-button.component';
 import { CartService } from './modules/cart/services/cart.service';
+import { PopUpCartComponent } from './modules/cart/components/pop-up-cart/pop-up-cart.component';
 
 @NgModule({
   imports: [
@@ -33,7 +36,8 @@ import { CartService } from './modules/cart/services/cart.service';
     FormsModule,
     HttpModule,
     Ng2Webstorage,
-    CartModule
+    CartModule,
+    ToasterModule
   ],
   declarations: [
     RootComponent,
@@ -45,7 +49,8 @@ import { CartService } from './modules/cart/services/cart.service';
     ProductComponent,
     LogoutDirective,
     AddCartButtonComponent,
-    CartButtonComponent
+    CartButtonComponent,
+    PopUpCartComponent
   ],
   providers: [ AuthService, CartService, CanActivateTeam, Permissions, UserToken ],
   bootstrap: [ RootComponent ]

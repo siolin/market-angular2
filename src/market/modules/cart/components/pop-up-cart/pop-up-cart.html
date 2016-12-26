@@ -1,0 +1,12 @@
+<div class="pop-up" *ngIf="getProducts()[0]">
+  <div class="item-list" *ngIf="!!getProducts()">
+    <ul class="list">
+      <li *ngFor="let item of getProducts()">
+        <img class="item-image" src="{{ item.img }}">
+        <div class="item-count">Кол: {{ item.count }}</div>
+        <div class="item-price">Цена: {{ item.price | currency }}</div>
+      </li>
+    </ul>
+    <a href="" routerLink="/cart">Перейти в корзину</a>
+  </div>
+</div>

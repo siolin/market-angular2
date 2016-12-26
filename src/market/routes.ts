@@ -10,6 +10,7 @@ import { CanActivateTeam } from './services/can-activate.service';
   selector: 'fountain-root',
   template: `
     <site-header></site-header>
+    <toaster-container></toaster-container>
     <router-outlet></router-outlet>
   `
 })

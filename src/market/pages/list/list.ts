@@ -26,7 +26,7 @@ export class ListComponent {
     });
   }
 
-  onClickElement(id: number) {
-    this.router.navigate(['/product', id]);
-  }
+  // onClickElement(id: number) {
+  //   this.router.navigate(['/product', id]);
+  // }
 }
