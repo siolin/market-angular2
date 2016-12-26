@@ -17,13 +17,16 @@ export class UserComponent {
     private router: Router
   ) { }
 
-  checkAuth() {
-    return this.authService.getToken();
+  isAuth() {
+    return !!this.authService.getToken();
+  }
+
+  isNotAuth() {
+    return !this.authService.getToken();
   }
 
   onClickLogout(e: Event) {
     e.preventDefault();
-    this.token = this.authService.getToken();
     if (this.router.url !== '/') {
       this.router.navigate(['/']);
     }

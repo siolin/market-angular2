@@ -1,5 +1,5 @@
 <header class="header">
-  <a class="logo" routerLink="">Market</a>
+  <a class="logo" routerLink="">{{ siteName }}</a>
   <cart-button *ngIf="checkAuth() && !checkUrl()"></cart-button>
   <user-block></user-block>
 </header>

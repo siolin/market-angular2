@@ -50,7 +50,7 @@ export class CartService {
     }
   }
 
-  countPoducts() {
+  countProducts() {
     if (this.products) {
       return this.products.length;
     }

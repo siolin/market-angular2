@@ -19,7 +19,7 @@ export class CartButtonComponent {
   }
 
   getCount() {
-    return this.cartService.countPoducts();
+    return this.cartService.countProducts();
   }
 
   showElement(e: any) {

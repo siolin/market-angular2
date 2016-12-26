@@ -25,8 +25,4 @@ export class ListComponent {
         this.products = product;
     });
   }
-
-  // onClickElement(id: number) {
-  //   this.router.navigate(['/product', id]);
-  // }
 }

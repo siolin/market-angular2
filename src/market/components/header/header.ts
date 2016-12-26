@@ -10,21 +10,24 @@ import { AuthService } from '../../services/auth.service';
 
 export class HeaderComponent {
   siteName: string;
+  cartState: string;
 
   constructor(
     private authService: AuthService,
     private router: Router
   ) {
     this.siteName = 'Market';
+    this.cartState = '/cart';
   }
 
   checkAuth() {
-    return this.authService.getToken();
+    return !!this.authService.getToken();
   }
 
   checkUrl() {
-    if (this.router.url === '/cart') {
+    if (this.router.url === this.cartState) {
       return true;
     }
+    return false;
   }
 }

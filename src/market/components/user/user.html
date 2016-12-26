@@ -1,17 +1,17 @@
 <a
   class="user-btn"
   routerLink="/registrate"
-  *ngIf="!checkAuth()"
+  *ngIf="isNotAuth()"
   >Регистрация</a>
 <a
   class="user-btn"
   routerLink="/login"
-  *ngIf="!checkAuth()"
+  *ngIf="isNotAuth()"
   >Вход</a>
 <a
   class="user-btn"
   href="#"
-  *ngIf="checkAuth()"
+  *ngIf="isAuth()"
   logout
   (click)="onClickLogout($event)"
   >Выход</a>
